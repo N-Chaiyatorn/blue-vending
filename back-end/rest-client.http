@@ -1,0 +1,37 @@
+GET http://0.0.0.0:8080/products/
+
+###
+
+POST http://0.0.0.0:8080/products/
+content-type: application/json
+
+{
+    "productId": 8,
+    "name": "Gohgae",
+    "price": 10,
+    "qty": 20,
+    "imgSource": "/Gohgae.png"
+}
+
+###
+
+DELETE http://0.0.0.0:8080/products/Coke
+content-type: application/json
+
+
+###
+
+PUT  http://0.0.0.0:8080/products/Coke
+content-type: application/json
+
+{
+    "productId": 1,
+    "name": "Coke",
+    "price": 20,
+    "imgSource": "/Coke.png"
+}
+
+###
+
+PUT  http://0.0.0.0:8080/products/restock/Coke?qtyChange=10
+content-type: application/json
